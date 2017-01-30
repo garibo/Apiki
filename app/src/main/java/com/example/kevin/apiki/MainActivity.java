@@ -53,10 +53,10 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_add_task:
                 final EditText taskEditText = new EditText(this);
                 AlertDialog dialog = new AlertDialog.Builder(this)
-                        .setTitle("Add a new task")
-                        .setMessage("What do you want to do next?")
+                        .setTitle("Agrega un recordatorio")
+                        .setMessage("que tienes en mente?")
                         .setView(taskEditText)
-                        .setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String task = String.valueOf(taskEditText.getText());
@@ -71,7 +71,7 @@ public class MainActivity extends ActionBarActivity {
                                 updateUI();
                             }
                         })
-                        .setNegativeButton("Cancel", null)
+                        .setNegativeButton("Cancelar", null)
                         .create();
                 dialog.show();
                 return true;
